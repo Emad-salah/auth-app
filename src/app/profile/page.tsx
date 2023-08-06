@@ -28,7 +28,7 @@ export default async function Profile() {
         />
         <CardContent>
           <Typography variant="body1">
-            Welcome in {userProfile?.name}.
+            Welcome in, {userProfile?.name}.
           </Typography>
 
           <Typography variant="body2">
