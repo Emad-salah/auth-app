@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import Button from "@mui/material/Button";
 import styles from "./styles/index.module.scss";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/app/utils/auth";
 import { getServerSession } from "next-auth";
 import { signOut } from "next-auth/react";
 import { redirect } from "next/navigation";
