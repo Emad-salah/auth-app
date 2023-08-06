@@ -9,7 +9,7 @@ interface Props {
   entry: ClientSafeProvider;
 }
 
-export default function Login({ entry }: Props) {
+export default function ProviderEntry({ entry }: Props) {
   return (
     <Button
       fullWidth

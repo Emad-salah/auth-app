@@ -6,12 +6,11 @@ import {
   CardHeader,
   Typography
 } from "@mui/material";
-import Button from "@mui/material/Button";
 import styles from "./styles/index.module.scss";
 import { authOptions } from "@/app/utils/auth";
 import { getServerSession } from "next-auth";
-import { signOut } from "next-auth/react";
 import { redirect } from "next/navigation";
+import LogoutButton from "./components/LogoutButton";
 
 export default async function Profile() {
   const session = await getServerSession(authOptions);
@@ -38,13 +37,7 @@ export default async function Profile() {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button
-            fullWidth
-            variant="contained"
-            onClick={() => signOut({ callbackUrl: "/login" })}
-          >
-            Logout
-          </Button>
+          <LogoutButton />
         </CardActions>
       </Card>
     </div>
